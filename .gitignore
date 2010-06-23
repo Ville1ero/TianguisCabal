@@ -2,7 +2,6 @@ config.ini
 .project
 .buildpath
 .settings/
-.htaccess
 001-tianguiscabal
 tianguiscabal.geany
 *~

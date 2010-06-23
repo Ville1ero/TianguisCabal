@@ -7,7 +7,7 @@
   #then your rewrite base would be: /path/to/tianguiscabal/
   #in a server where "public" is visible directly in http://domain/, leave this as '/'
   #Must be the same than rewrite_base in config.ini 
-  RewriteBase /path/to/tianguiscabal/
+  RewriteBase /TianguisCabal/
   
   #These rules exclude real files and directories from the rewriting and lets them
   #pass through unaffected:(uncomment IF NEEDED).
