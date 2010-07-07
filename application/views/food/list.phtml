@@ -1,0 +1,22 @@
+<p><a href="<?php echo BASE_URL ?>/food/edit/?id=0">Añadir una Orden de Comida</a></p>
+<?php if ( !empty($foods) ) { ?>
+<table>
+<tr><th>Id</th><th>Cena</th><th>Cliente</th></tr>
+  <?php
+  foreach ($foods AS $food) {
+    $Food = (object)$food;?>
+    <tr>
+      <td><?php echo $Food->OrdenID?>
+      <td><?php echo $Food->Comida?> </td>
+      <td><?php echo $Food->Name?></td>
+      <td>
+        <!-- <a href="<?php echo BASE_URL ?>/food/view/?id=<?php echo $Food->OrdenID ?>">Ver</a> || -->
+        <a href="<?php echo BASE_URL ?>/food/edit/?id=<?php echo $Food->OrdenID ?>">Editar</a>
+      </td>
+    
+    </tr>
+  <?php }?>
+</table>
+<?php } else { ?>
+<p><strong>No hay ninguna Orden de Comida</strong></p>
+<?php }?>

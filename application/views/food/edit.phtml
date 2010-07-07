@@ -1,0 +1,32 @@
+<?php /**@todo Checking for isset on each variable is too much burn just to avoid notices, Discuss in class**/?>
+
+<form action="<?php echo BASE_URL?>/food/save" method="POST">
+  
+  <label for="OrdenID">OrdenID:</label><input type="text" name="OrdenID" id="OrdenID"
+  value="<?php echo (isset($Food->OrdenID))?$Food->OrdenID:'';?>" readonly="readonly"/><br />
+  
+  <label for="Comida">Cena:</label>
+    <select name="Comida">
+      <optgroup label="Comunmente tenemos...">
+      	<option>SoupAndSandwich</option>
+      	<option>Spaghetti</option>
+      </optgroup>
+      <optgroup label="Especial de la semana...">
+      	<option>FishAndChips</option>
+      </optgroup>
+    </select><br />
+  <?php isset($Food->Comida)?$Food->Comida:'';?>
+   
+  <label for="Name">Cliente:</label><input type="text" name="Name" id="Name"
+  value="<?php echo (isset($Food->Name))?$Food->Name:'';?>"/><br />
+  
+  <label for="Fecha">Fecha:</lable><input type="text" name="Fecha" id="Fecha"
+  value="<?php echo (isset($Food->Fecha))?$Food->Fecha:'2010-06-08';?>"/><br />
+  
+  <input type="button" onclick="window.location.href='<?php echo BASE_URL?>/food'" value="Cancelar"/>
+  <input type="submit" value="<?php echo _('Salvar') ?>"/>
+
+  <?php if ( isset($Food->OrdenID) ) { ?>
+    <input type="button" onclick="window.location.href='<?php echo BASE_URL ?>/food/delete/?id=<?php echo $Food->OrdenID?>'" value="<?php echo _('Delete') ?>"/>
+  <?php }?>
+</form>

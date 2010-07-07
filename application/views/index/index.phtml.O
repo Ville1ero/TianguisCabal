@@ -5,5 +5,4 @@
   <li><a href="<?php echo BASE_URL ?>/examples">Ejemplos de Codigo</a></li>
   <li><a href="<?php echo BASE_URL ?>/concept">Concepto de Arquitectura</a></li>
   <li><a href="<?php echo BASE_URL ?>/category">Ejemplo de <acronym title="Create, Update, Read and Delete">CRUD</acronym></a></li>
-  <li><a href="<?php echo BASE_URL ?>/food">Pedir Comida <acronym title="Alta, Actualizar, Consultar y Cancelar">AACC</acronym></a></li>
   </ul>
