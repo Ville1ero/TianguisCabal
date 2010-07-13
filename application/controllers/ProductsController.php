@@ -14,8 +14,8 @@ class ProductsController extends Controller {
     $View = new View('products/list');
 	//indicamos el titulo
     $View->assign('_title_', _('Productos'));
-	//Category Model extiende del DAO carga de la base de datos la tabla food
-    $Foods = ProductsModel::getAll();
+	//Category Model extiende del DAO carga de la base de datos la tabla products
+    $Products = ProductsModel::getAll();
 	//asignamos variable de campo y valor
     $View->assign('products', $Products);
 	//Mostramos la vista
